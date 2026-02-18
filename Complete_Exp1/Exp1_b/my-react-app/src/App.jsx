@@ -1,19 +1,9 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { TaskContext } from './TaskContext'
 import './App.css'
 
 function App() {
-  const [task, setTask] = useState('')
-  const [tasks, setTasks] = useState([])
-
-  const addTask = () => {
-    if (!task.trim()) return
-    setTasks([...tasks, task])
-    setTask('')
-  }
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') addTask()
-  }
+  const { task, setTask, tasks, addTask, handleKeyDown } = useContext(TaskContext)
 
   return (
     <div className="container">

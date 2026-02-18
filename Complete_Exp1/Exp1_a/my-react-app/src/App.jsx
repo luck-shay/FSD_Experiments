@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useContext } from 'react'
+import { CountContext } from './CountContext'
 import './App.css'
 
 function App(){
-  const [count,setCount]=useState(0)
+  const { count, setCount } = useContext(CountContext)
 
   return(
     <div className="outer-box">

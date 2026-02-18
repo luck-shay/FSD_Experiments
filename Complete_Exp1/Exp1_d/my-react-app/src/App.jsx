@@ -1,15 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { FormContext } from "./FormContext";
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const { name, setName, email, setEmail, submitted, handleSubmit } = useContext(FormContext);
 
   return (
     <div className="container">

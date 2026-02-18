@@ -1,12 +1,9 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 import "./App.css";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <div className={theme}>
