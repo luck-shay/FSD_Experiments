@@ -1,0 +1,68 @@
+/* AlertBanner Styles */
+.alert {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow-lg);
+  z-index: 2000;
+  max-width: 400px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.alert-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.alert-success {
+  border-left: 3px solid var(--success);
+}
+
+.alert-success .alert-content {
+  color: var(--success);
+}
+
+.alert-error {
+  border-left: 3px solid var(--error);
+}
+
+.alert-error .alert-content {
+  color: var(--error);
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.alert-close:hover {
+  color: var(--text-primary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .alert {
+    right: 10px;
+    left: 10px;
+    max-width: none;
+  }
+}

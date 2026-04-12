@@ -1,0 +1,19 @@
+package com.jobtracker.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDate;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ApplicationDTO {
+    private Integer id;
+    private Integer userId;
+    private String company;
+    private String role;
+    private String status;
+    private LocalDate appliedDate;
+    private String notes;
+}
